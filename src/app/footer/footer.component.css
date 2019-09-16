@@ -1,0 +1,16 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+  height: 35px;
+}
+span {
+  font-size: 75%;
+  padding: 0 3px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(217, 221, 242, 1);
+}

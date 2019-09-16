@@ -1,0 +1,85 @@
+<div class="intro-container">
+  <!--<h1 id="api-title">{{ file.info.title }}</h1>-->
+  <!--<span id="api-version">{{ file.info.version }}</span>-->
+  <!--<p id="base-url">-->
+    <!--[ Base URL: {{ file.host + file.basePath }} ]-->
+  <!--</p>-->
+  <!--<p id="api-description" [innerHTML]="file.info.description | MarkdownToHtml">-->
+  <!--</p>-->
+</div>
+<div class="body-container">
+  <mat-card style="padding: 5px 0 0 20px;">
+    <mat-form-field>
+      <mat-label>Schemes</mat-label>
+      <mat-select disableOptionCentering>
+        <mat-option *ngFor="let scheme of schemes" [value]="scheme.value">
+          {{scheme.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="openSecurityDialog()" style="float: right; margin: 10px 20px 0 0">Authorize</button>
+  </mat-card>
+  <br>
+  <h3 style="margin: 12px 0; font-weight: 300">API Calls</h3>
+  <mat-accordion id="api-tags">
+    <!--<mat-expansion-panel *ngFor="let tag of file.tags">-->
+
+      <!--<mat-expansion-panel-header>-->
+        <!--<mat-panel-title style="max-width: max-content; margin-right: 20px; height: 30px; font-size: 140%; font-weight: 300; line-height: 30px">-->
+          <!--{{ tag.name }}-->
+        <!--</mat-panel-title>-->
+        <!--<mat-panel-description style="line-height: 30px; position: relative">-->
+            <!--{{ tag.description }}-->
+          <!--<div *ngIf="isDefined(tag.externalDocs)" style="position: absolute; right: 0">-->
+            <!--{{ tag.externalDocs.description + ':'}}-->
+            <!--<a href="tag.externalDocs.url">{{ tag.externalDocs.url }}</a>-->
+          <!--</div>-->
+        <!--</mat-panel-description>-->
+      <!--</mat-expansion-panel-header>-->
+
+      <!--<mat-card *ngFor="let req of tag.requests; let i = index" [ngClass]="getRequestClass(i, tag.requests.length)" class="request-card" (click)="openRequestDialog(req)">-->
+        <!--<div style="display: block; height: 30px; line-height: 30px; position: relative">-->
+          <!--<div [ngClass]="getColor(req.type)" class="request-tag">-->
+            <!--{{ req.type | uppercase }}-->
+          <!--</div>-->
+          <!--<div class="request-path">-->
+            <!--{{ req.path }}-->
+          <!--</div>-->
+          <!--<div class="request-summary">-->
+            <!--{{ req.summary }}-->
+          <!--</div>-->
+          <!--<img src="https://img.icons8.com/android/24/686868/lock.png" class="request-auth-icon">-->
+          <!--&lt;!&ndash;<img src="https://img.icons8.com/android/24/21B55F/unlock.png" class="request-auth-icon">&ndash;&gt;-->
+        <!--</div>-->
+      <!--</mat-card>-->
+
+    <!--</mat-expansion-panel>-->
+  </mat-accordion>
+  <br>
+
+  <h3 style="margin: 12px 0; font-weight: 300">Models</h3>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let model of models">
+      <mat-expansion-panel-header>
+        <mat-panel-title style="width: 30px; font-size: 110%; font-weight: 300">
+          {{ model }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<!--<mat-card id="request-sandbox-header">-->
+
+  <!--<label for="language" id="language_label">Language</label>-->
+  <!--<button id="language" mat-button [matMenuTriggerFor]="lang_menu">{{selected_lang.name}}</button>-->
+  <!--<mat-menu #lang_menu="matMenu">-->
+    <!--<button mat-menu-item *ngFor="let lang of languages" (click)="set_selected_lang(lang)">{{ lang.name }}</button>-->
+  <!--</mat-menu>-->
+
+<!--</mat-card>-->
+<!--<mat-card id="request-sandbox-body">-->
+  <!--<pre class="prettyprint" id="codeblock">-->
+    <!--{{ selected_lang.code }}-->
+  <!--</pre>-->
+<!--</mat-card>-->

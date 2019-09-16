@@ -1,0 +1,14 @@
+#button-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#authorize-button {
+  position: absolute;
+  right: 0;
+}
+#cancel-button {
+  position: absolute;
+  left: 0;
+}
+

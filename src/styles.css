@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button:focus {outline:0;}
+
+.scrollable {
+  overflow: scroll;
+}
+.top {
+  z-index: 1000;
+}
+.middle {
+  z-index: 500;
+}
+.bottom {
+  z-index: 0;
+}
+.pointer {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+

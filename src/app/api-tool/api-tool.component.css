@@ -1,0 +1,130 @@
+.intro-container {
+  padding: 40px 100px;
+  background: #efefef;
+}
+.body-container {
+  padding: 40px 100px;
+}
+#api-title {
+  display: inline-block;
+  font-weight: lighter;
+  margin: 0;
+}
+#api-version {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0 0 5px;
+  font-size: 10px;
+  padding: 0 7px;
+  color: white;
+  background-color: #7d8492;
+  border-radius: 57px;
+}
+#base-url {
+  font-size: 13px;
+  font-weight: 300 !important;
+  margin: 0  0 15px 0;
+  font-family:courier, courier new, serif;
+  color: #3b4151;
+}
+#api-description {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #3b4151;
+}
+#request-sandbox-header {
+  margin: 20%;
+  margin-bottom: 30px;
+}
+#request-sandbox-body {
+  margin: 20%;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+#add-lang {
+  position: absolute;
+  right: 20px;
+}
+#language-label {
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+.sandbox-container {
+  background-color: #555555;
+}
+#codeblock {
+  border: none;
+}
+
+.input-full-width{
+  width: 100%;
+}
+
+.request-tag {
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  display: inline-block;
+  color: white;
+  font-size: 105%;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.post {
+  background-color: #6CCB94;
+}
+
+.put {
+  background-color: #F1A34C;
+}
+
+.get {
+  background-color: #70AEF8;
+}
+
+.delete {
+  background-color: #EC4954;
+}
+
+.request-path {
+  font-weight: 500;
+  line-height: 30px;
+  display: inline-block;
+  padding-left: 16px;
+  color: black;
+  width: max-content;
+}
+.request-auth-icon {
+  max-width: 16px;
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.request-summary {
+  display: inline-block;
+  line-height: 30px;
+  margin-left: 12px;
+  font-size: 95%;
+  color: #686868;
+}
+.request-card-top {
+  border-radius: 5px 5px 0 0;
+}
+.request-card-middle {
+  border-radius: 0 0 0 0;
+}
+.request-card-bottom {
+  border-radius: 0 0 5px 5px;
+}
+.request-card {
+  cursor: pointer;
+  position: relative;
+}
+.request-card:hover {
+  background-color: #fafafa;
+}

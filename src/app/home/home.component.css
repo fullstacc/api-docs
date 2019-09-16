@@ -1,0 +1,19 @@
+h1 {
+  font-size: 600%;
+  font-weight: normal;
+  margin: auto;
+  color: #3f51b5;
+  margin-bottom: 30px;
+}
+button {
+  margin: 20px;
+  font-size: 200%;
+  font-weight: lighter;
+  border-radius: 0;
+  width: 17%;
+  height: 8vh;
+}
+#title-container {
+  transform: translate(0, 90%);
+  text-align: center;
+}

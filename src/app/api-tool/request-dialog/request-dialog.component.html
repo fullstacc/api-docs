@@ -1,0 +1,76 @@
+<!--<form style="min-width: 150px; max-width: 500px; width: 100%;">-->
+  <!--<mat-form-field style="width: 100%; font-size: 120%; margin-bottom: 0">-->
+    <!--<input matInput placeholder="API Key" value="">-->
+  <!--</mat-form-field>-->
+  <!--<div id="button-container">-->
+    <!--<button mat-stroked-button class="bottom" id="cancel-button" color="warn">Cancel</button>-->
+    <!--<button mat-stroked-button class="bottom" id="authorize-button" color="primary">Authorize</button>-->
+  <!--</div>-->
+<!--</form>-->
+<table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows>
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay; let i = index">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element" style="cursor: pointer"> {{element[columnValues[i]]}} </td>
+  </ng-container>
+
+  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail"
+           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+        <div class="example-element-description">
+
+          <div *ngIf="element.description !== undefined">
+            <strong>description</strong>
+            {{ element.description }}
+            <br>
+          </div>
+
+          <div *ngIf="element.format !== undefined">
+            <strong>format</strong>
+            {{ element.format }}
+            <br>
+          </div>
+
+          <div *ngIf="element.minimum !== undefined">
+            <strong>minimum</strong>
+            {{ element.minimum }}
+            <br>
+          </div>
+
+          <div *ngIf="element.maximum !== undefined">
+            <strong>maximum</strong>
+            {{ element.maximum }}
+            <br>
+          </div>
+
+          <div *ngIf="element.schema !== undefined">
+            <strong>schema</strong>
+            {{ element.schema }}
+            <br>
+          </div>
+
+          <div *ngIf="element.items !== undefined">
+            <strong>items</strong>
+            {{ element.items }}
+            <br>
+          </div>
+
+          <div *ngIf="element.collectionFormat !== undefined">
+            <strong>collection format</strong>
+            {{ element.collectionFormat }}
+          </div>
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>

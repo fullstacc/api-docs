@@ -1,0 +1,22 @@
+<!--<h1 mat-dialog-title>Available authorizations</h1>-->
+<!--<div mat-dialog-content>-->
+  <!--<p>What's your favorite animal?</p>-->
+  <!--<mat-form-field>-->
+    <!--<input matInput [(ngModel)]="data.animal">-->
+  <!--</mat-form-field>-->
+<!--</div>-->
+<!--<div mat-dialog-actions>-->
+ <!---->
+<!--</div>-->
+<!--<code style="font-size: 200%">api_key</code>-->
+<form style="min-width: 150px; max-width: 500px; width: 100%;">
+  <mat-form-field style="width: 100%; font-size: 120%; margin-bottom: 0">
+    <input matInput placeholder="API Key" value="">
+  </mat-form-field>
+  <div id="button-container">
+    <button mat-stroked-button class="bottom" id="cancel-button" color="warn">Cancel</button>
+    <button mat-stroked-button class="bottom" id="authorize-button" color="primary">Authorize</button>
+  </div>
+</form>
+<!--<button mat-button (click)="onNoClick()">No Thanks</button>-->
+<!--<button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>-->

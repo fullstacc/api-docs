@@ -1,0 +1,16 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+mat-card {
+  /*margin: 80px 140px;*/
+  width: 800px;
+  margin: 120px auto;
+
+}
+
+#home-button {
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+}

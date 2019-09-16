@@ -1,0 +1,23 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+mat-card {
+  /*margin: 80px 140px;*/
+  width: 800px;
+  margin: 120px auto;
+}
+.button-bar {
+  position: relative;
+  height: 40px;
+}
+.previous-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.next-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

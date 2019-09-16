@@ -1,0 +1,78 @@
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+#search-bar {
+  margin-bottom: 30px;
+}
+#api-container {
+  width: 800px;
+  margin: 120px auto;
+}
+/*.search-result {*/
+  /*margin-top: 15px;*/
+  /*margin-bottom: 15px;*/
+/*}*/
+.api-panel-header {
+  min-height: 60px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Styles from original api.nasa.gov site (github.com/nasa/api-docs */
+
+table {
+  margin-bottom:1em;
+  overflow:auto
+}
+
+table th,.content table td {
+  text-align:left;
+  vertical-align:top;
+  line-height:1.6
+}
+
+table th {
+  padding:5px 10px;
+  border-bottom:1px solid #ccc;
+  vertical-align:bottom
+}
+
+table td {
+  padding:10px
+}
+
+table tr:last-child {
+  border-bottom:1px solid #ccc
+}
+
+table tr:nth-child(odd)>td {
+  background-color:#f9fbfc
+}
+
+table tr:nth-child(even)>td {
+  background-color:#f3f7fa
+}
+
+dt {
+  font-weight:700
+}
+
+dd {
+  margin-left:15px
+}
+
+p, li, dt, dd {
+  line-height:1.6;
+  margin-top:0
+}
+
+#APOD {
+  background-color: #EC4954;
+}

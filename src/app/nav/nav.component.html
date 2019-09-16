@@ -1,0 +1,60 @@
+<div id="app-container">
+  <mat-toolbar color="primary" id="toolbar">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <span id="logo"><a class="pointer" (click)="nav_srvc.onClick('')">{{site_title}}</a></span>
+  </mat-toolbar>
+
+  <mat-drawer-container class="nav-container" autosize [hasBackdrop]="false">
+    <mat-drawer #drawer class="nav-drawer" mode="over" [opened]="true">
+
+      <button class="main-nav-button"
+              (click)="nav_srvc.onClick('')"
+              [ngClass]="nav_srvc.isActive('')"
+              mat-button>
+        Overview
+      </button>
+      <br>
+
+      <button class="main-nav-button"
+              (click)="nav_srvc.onClick('key')"
+              [ngClass]="nav_srvc.isActive('key')"
+              mat-button>
+        Generate API Key
+      </button>
+      <br>
+
+      <button class="main-nav-button"
+              (click)="nav_srvc.onClick('recover')"
+              [ngClass]="nav_srvc.isActive('recover')"
+              mat-button>
+        Recover API Key
+      </button>
+      <br>
+
+      <!--<button class="main-nav-button"-->
+              <!--(click)="nav_srvc.onClick('add')"-->
+              <!--[ngClass]="nav_srvc.isActive('add')"-->
+              <!--mat-button>-->
+        <!--Add API-->
+      <!--</button>-->
+      <!--<br>-->
+
+      <button class="main-nav-button"
+              (click)="nav_srvc.onClick('apis')"
+              [ngClass]="nav_srvc.isActive('apis')"
+              mat-button>
+        Browse APIs
+      </button>
+      <br>
+
+    </mat-drawer>
+    <div id="router-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+
+
+</div>
